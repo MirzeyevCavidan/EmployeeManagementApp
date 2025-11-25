@@ -1,7 +1,6 @@
 ﻿using EmployeeManagement.Exceptions;
 using EmployeeManagement.Models;
 using Newtonsoft.Json;
-using System.Xml;
 
 namespace EmployeeManagement.Services
 {
@@ -11,7 +10,7 @@ namespace EmployeeManagement.Services
         private const string filePath = "employees.json";
         public static void SaveToFile()
         {
-            var jsonData = JsonConvert.SerializeObject(employees, Newtonsoft.Json.Formatting.Indented);
+            var jsonData = JsonConvert.SerializeObject(employees, Formatting.Indented);
             File.WriteAllText(filePath, jsonData);
         }
         public static void LoadFromFile()
