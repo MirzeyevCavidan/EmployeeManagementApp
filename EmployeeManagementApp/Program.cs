@@ -8,14 +8,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        try
-        {
-            EmployeeService.LoadFromFile();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Error loading file: {ex.Message}");
-        }
+        EmployeeService.LoadFromFile();
         while (true)
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
